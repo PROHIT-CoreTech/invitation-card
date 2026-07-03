@@ -6,6 +6,7 @@ import FamilyGrid from "../components/FamilyGrid";
 import EventTimeline from "../components/EventTimeline";
 import LocationCard from "../components/LocationCard";
 import BackgroundMusic from "../components/BackgroundMusic";
+import MarigoldPetals from "../components/MarigoldPetals";
 import { invitationData } from "../constants/data";
 
 export default function Home() {
@@ -90,6 +91,9 @@ export default function Home() {
         {/* Invitation Content Pages (Visible once curtains open) */}
         {isRevealed && (
           <div className="flex-1 flex flex-col relative z-10 w-full animate-fade-in-up">
+            
+            {/* Falling Marigold Petals background effect */}
+            <MarigoldPetals />
             
             {/* Hero Section */}
             <WelcomeSection />

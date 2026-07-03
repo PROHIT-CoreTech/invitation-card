@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { invitationData } from "../constants/data";
+import CountdownTimer from "./CountdownTimer";
 
 // Sparkle configurations for floating background elements
 const sparkles = [
@@ -138,6 +139,11 @@ export default function WelcomeSection() {
       >
         {invitationData.welcomingNote}
       </motion.p>
+
+      {/* Countdown Timer */}
+      <motion.div variants={itemVariants} className="w-full px-6 z-10">
+        <CountdownTimer />
+      </motion.div>
 
       {/* Scroll Down Indicator */}
       <motion.div 

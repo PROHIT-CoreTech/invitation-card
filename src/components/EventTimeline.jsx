@@ -6,7 +6,8 @@ import {
   Sparkles, 
   Utensils, 
   Waves,
-  Sparkle
+  Sparkle,
+  Calendar
 } from "lucide-react";
 import { invitationData } from "../constants/data";
 
@@ -118,6 +119,19 @@ export default function EventTimeline() {
               <p className="font-body text-xs text-maroon-dark/85 mt-1 leading-relaxed">
                 {event.details}
               </p>
+              
+              {/* Add to Calendar Button */}
+              <div className="mt-3 flex justify-end">
+                <a 
+                  href={event.calendarUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-[10px] font-body font-bold text-gold-dark hover:text-saffron-dark bg-gold/5 hover:bg-gold/10 border border-gold/20 hover:border-gold/40 px-2.5 py-1 rounded-md transition-all duration-300 active:scale-95 shadow-sm"
+                >
+                  <Calendar className="w-3 h-3" />
+                  कॅलेंडरमध्ये जोडा
+                </a>
+              </div>
             </div>
           </motion.div>
         ))}
