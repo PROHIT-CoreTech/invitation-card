@@ -63,10 +63,10 @@ export const invitationData = {
   ],
   
   venue: {
-    name: "बर्गे निवास",
-    address: "घोडबंदर रोड, ठाणे (पश्चिम), महाराष्ट्र",
-    googleMapsLink: "https://maps.google.com/?q=Ghodbunder+Road+Thane",
-    note: "मुख्य रस्त्यावरून ५ मिनिटांच्या अंतरावर."
+    name: "भूमी लॉन्स (Bhoomi Lawns)",
+    address: "कल्याण - शिळफाटा रोड, शिळगाव, ठाणे, महाराष्ट्र ४२१२०४",
+    googleMapsLink: "https://www.google.com/maps/place/Bhoomi+Lawns,+Kalyan+-+Shilphata+Rd,+Shilgaon,+Thane,+Maharashtra+421204/@19.1503593,73.0538677,147m/data=!3m1!1e3!4m6!3m5!1s0x3be7bf885d1094ed:0x5dc79b984925d3b3!8m2!3d19.150136!4d73.0539942!16s%2Fg%2F11qs97312q!5m1!1e1?authuser=0&entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    note: "कल्याण - शिळफाटा मुख्य रस्त्यावर."
   },
   
   rsvpPhoneNumber: "919561042069",
