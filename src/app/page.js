@@ -104,7 +104,7 @@ export default function Home() {
       />
 
       {/* Center Mobile Container with Traditional Gold Border */}
-      <div className="w-full max-w-md min-h-dvh sm:min-h-[92vh] bg-cream sm:rounded-3xl shadow-[0_0_60px_rgba(212,175,55,0.2)] border-0 sm:border-2 sm:border-gold/30 flex flex-col relative overflow-hidden mandala-pattern traditional-border mobile-optimize">
+      <div className="w-full max-w-md min-h-dvh sm:min-h-[92vh] bg-white sm:rounded-3xl shadow-[0_0_60px_rgba(212,175,55,0.2)] border-0 sm:border-2 sm:border-gold/30 flex flex-col relative overflow-hidden traditional-border mobile-optimize">
         
         {/* Traditional Hanging Toran (Mango Leaves & Marigold Flowers) */}
         <div className="absolute top-3 left-3 right-3 h-8 flex justify-around pointer-events-none z-20 opacity-90 select-none">

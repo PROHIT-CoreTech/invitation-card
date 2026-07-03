@@ -48,7 +48,7 @@ export default function MarigoldPetals() {
   if (!isMounted) return null;
 
   return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden z-25">
+    <div className="fixed top-0 bottom-0 left-1/2 -translate-x-1/2 max-w-md w-full pointer-events-none overflow-hidden z-25">
       {petals.map((petal) => (
         <div
           key={petal.id}

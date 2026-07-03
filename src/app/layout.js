@@ -1,16 +1,16 @@
-import { Yatra_One, Poppins } from "next/font/google";
+import { Rozha_One, Poppins } from "next/font/google";
 import "./globals.css";
 
-const yatraOne = Yatra_One({
+const rozhaOne = Rozha_One({
   weight: "400",
   subsets: ["devanagari", "latin"],
-  variable: "--font-yatra",
+  variable: "--font-rozha",
   display: "swap",
 });
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
-  subsets: ["latin"],
+  subsets: ["devanagari", "latin"],
   variable: "--font-poppins",
   display: "swap",
 });
@@ -29,7 +29,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="mr" className={`${yatraOne.variable} ${poppins.variable}`}>
+    <html lang="mr" className={`${rozhaOne.variable} ${poppins.variable}`}>
       <head>
         {/* Preload critical visual assets */}
         <link rel="preload" href="/ganesha-main.png" as="image" />

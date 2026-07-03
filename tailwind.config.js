@@ -29,7 +29,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: ["var(--font-yatra)", "serif"],
+        heading: ["var(--font-rozha)", "serif"],
         body: ["var(--font-poppins)", "sans-serif"],
       },
       animation: {

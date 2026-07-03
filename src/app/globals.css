@@ -13,7 +13,7 @@
   --color-gold-light: #F3E5AB;
   --color-gold-dark: #AA7C11;
 
-  --font-heading: var(--font-yatra), serif;
+  --font-heading: var(--font-rozha), serif;
   --font-body: var(--font-poppins), sans-serif;
 
   --animate-pulse-gold: pulseGold 2s infinite ease-in-out;
