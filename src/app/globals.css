@@ -1,26 +1,135 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-cream: #FFFDF9;
+  --color-cream-dark: #F4EFEB;
+  --color-maroon: #800000;
+  --color-maroon-light: #A31D1D;
+  --color-maroon-dark: #5E0000;
+  --color-saffron: #FF9933;
+  --color-saffron-light: #FFB84D;
+  --color-saffron-dark: #E67E00;
+  --color-gold: #D4AF37;
+  --color-gold-light: #F3E5AB;
+  --color-gold-dark: #AA7C11;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-heading: var(--font-yatra), serif;
+  --font-body: var(--font-poppins), sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-pulse-gold: pulseGold 2s infinite ease-in-out;
+  --animate-spin-slow: spin 12s linear infinite;
+  --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
+
+  @keyframes pulseGold {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 12px rgba(212, 175, 55, 0);
+    }
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+  --background: #FFFDF9;
+  --foreground: #5E0000;
 }
+
+body {
+  background-color: #171717; /* Dark background on desktop to focus on the centered mobile container */
+  color: var(--foreground);
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Utilities for Traditional Invitation Look */
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 30%, #B38728 70%, #AA771C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.maroon-gradient-bg {
+  background: linear-gradient(135deg, #800000 0%, #A31D1D 50%, #5E0000 100%);
+}
+
+/* Repeating Indian Mandala/Traditional Background Pattern */
+.mandala-pattern {
+  background-color: #FFFDF9;
+  background-image: 
+    radial-gradient(circle at 100% 150%, #FFFDF9 24%, #f7f1e6 24%, #f7f1e6 28%, #FFFDF9 28%, #FFFDF9 36%, #f7f1e6 36%, #f7f1e6 40%, transparent 40%),
+    radial-gradient(circle at 0% 150%, #FFFDF9 24%, #f7f1e6 24%, #f7f1e6 28%, #FFFDF9 28%, #FFFDF9 36%, #f7f1e6 36%, #f7f1e6 40%, transparent 40%),
+    radial-gradient(circle at 50% 100%, #f5ebd9 10%, #FFFDF9 10%, #FFFDF9 23%, #f5ebd9 23%, #f5ebd9 30%, #FFFDF9 30%, #FFFDF9 43%, #f5ebd9 43%, #f5ebd9 50%, transparent 50%),
+    radial-gradient(circle at 100% 50%, #f5ebd9 5%, #FFFDF9 5%, #FFFDF9 15%, #f5ebd9 15%, #f5ebd9 20%, #FFFDF9 20%, #FFFDF9 35%, #f5ebd9 35%, #f5ebd9 40%, transparent 40%),
+    radial-gradient(circle at 0% 50%, #f5ebd9 5%, #FFFDF9 5%, #FFFDF9 15%, #f5ebd9 15%, #f5ebd9 20%, #FFFDF9 20%, #FFFDF9 35%, #f5ebd9 35%, #f5ebd9 40%, transparent 40%);
+  background-size: 80px 40px;
+}
+
+/* Traditional Corner Borders */
+.traditional-border {
+  position: relative;
+}
+
+.traditional-border::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  border: 1px solid #D4AF37;
+  pointer-events: none;
+}
+
+.traditional-border::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 2px solid #D4AF37;
+  border-image: linear-gradient(to right, #BF953F, #FCF6BA, #AA771C) 1;
+  pointer-events: none;
+}
+
+/* Hide Scrollbar for clean app experience */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFDF9;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #AA7C11;
+}
+
+/* Mobile-first touch, swipe, and selection optimizations */
+.mobile-optimize {
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
