@@ -43,6 +43,15 @@ export default function FamilyGrid() {
       <div className="absolute bottom-4 left-4 w-3.5 h-3.5 border-b border-l border-gold/60" />
       <div className="absolute bottom-4 right-4 w-3.5 h-3.5 border-b border-r border-gold/60" />
 
+      {/* Subtle Background Mandala Watermark */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 opacity-[0.03] pointer-events-none z-0">
+        <img 
+          src="/invitation_bg.png" 
+          alt="mandala" 
+          className="w-full h-full object-contain filter sepia"
+        />
+      </div>
+
       {/* Section Header */}
       <motion.div 
         initial="hidden"
@@ -70,7 +79,7 @@ export default function FamilyGrid() {
           <motion.div
             key={host.id}
             variants={cardVariants}
-            className={`flex flex-col items-center bg-cream border border-gold/30 rounded-xl p-3 shadow-sm relative overflow-hidden group hover:border-gold transition-all duration-300 ${
+            className={`flex flex-col items-center bg-white/70 backdrop-blur-xs border border-gold/30 rounded-xl p-3 shadow-sm relative overflow-hidden group hover:border-gold transition-all duration-300 ${
               invitationData.hosts.length % 2 !== 0 && index === invitationData.hosts.length - 1
                 ? "col-span-2 max-w-[170px] w-full mx-auto"
                 : ""

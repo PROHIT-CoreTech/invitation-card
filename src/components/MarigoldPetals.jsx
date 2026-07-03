@@ -37,7 +37,7 @@ export default function MarigoldPetals() {
           left: `${(i * 7) + 5}%`, // Even distribution across screen width with offset
           animationDelay: `${(i * 0.9).toFixed(1)}s`,
           animationDuration: `${(8 + (i % 5) * 2.2).toFixed(1)}s`,
-          opacity: 0.8
+          opacity: 0.35
         }
       };
     });

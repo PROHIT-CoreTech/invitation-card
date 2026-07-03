@@ -81,6 +81,13 @@ body {
   background-size: 80px 40px;
 }
 
+/* Repeating Halftone/Dot-Matrix Background Pattern */
+.dot-pattern {
+  background-color: #FFFDF9;
+  background-image: radial-gradient(#e6ded2 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
 /* Traditional Corner Borders */
 .traditional-border {
   position: relative;
@@ -140,10 +147,10 @@ body {
     opacity: 0;
   }
   10% {
-    opacity: 0.8;
+    opacity: 0.35;
   }
   90% {
-    opacity: 0.8;
+    opacity: 0.35;
   }
   100% {
     transform: translateY(105dvh) rotate(540deg) translateX(30px);

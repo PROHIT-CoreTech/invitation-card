@@ -57,12 +57,21 @@ export default function EventTimeline() {
   };
 
   return (
-    <section className="py-10 px-6 traditional-border my-6 relative overflow-hidden bg-cream">
+    <section className="py-10 px-6 traditional-border my-6 relative overflow-hidden bg-white/40 backdrop-blur-xs">
       {/* Decorative Gold Frame Corner Accents */}
       <div className="absolute top-4 left-4 w-3.5 h-3.5 border-t border-l border-gold/60" />
       <div className="absolute top-4 right-4 w-3.5 h-3.5 border-t border-r border-gold/60" />
       <div className="absolute bottom-4 left-4 w-3.5 h-3.5 border-b border-l border-gold/60" />
       <div className="absolute bottom-4 right-4 w-3.5 h-3.5 border-b border-r border-gold/60" />
+
+      {/* Subtle Background Mandala Watermark */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 opacity-[0.03] pointer-events-none z-0">
+        <img 
+          src="/invitation_bg.png" 
+          alt="mandala" 
+          className="w-full h-full object-contain filter sepia"
+        />
+      </div>
 
       {/* Section Header */}
       <div className="text-center mb-10 flex flex-col items-center">
@@ -92,13 +101,13 @@ export default function EventTimeline() {
               variants={nodeVariants}
               className="absolute -left-[37px] top-1 w-6 h-6 rounded-full gold-gradient-bg border border-gold flex items-center justify-center shadow-md z-10"
             >
-              <div className="w-5 h-5 rounded-full bg-cream flex items-center justify-center">
+              <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center shadow-sm">
                 {getIcon(event.icon)}
               </div>
             </motion.div>
 
             {/* Event Card */}
-            <div className="bg-cream border border-gold/20 rounded-xl p-4 shadow-sm relative hover:border-gold/50 transition-all duration-300 group">
+            <div className="bg-white/70 backdrop-blur-xs border border-gold/20 rounded-xl p-4 shadow-sm relative hover:border-gold/50 transition-all duration-300 group">
               {/* Corner accent for cards */}
               <div className="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-saffron group-hover:scale-125 transition-transform" />
 

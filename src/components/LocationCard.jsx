@@ -48,13 +48,22 @@ export default function LocationCard() {
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
       variants={containerVariants}
-      className="py-10 px-6 traditional-border my-6 bg-cream relative overflow-hidden"
+      className="py-10 px-6 traditional-border my-6 bg-white/40 backdrop-blur-xs relative overflow-hidden"
     >
       {/* Decorative Gold Frame Corner Accents */}
       <div className="absolute top-4 left-4 w-3.5 h-3.5 border-t border-l border-gold/60" />
       <div className="absolute top-4 right-4 w-3.5 h-3.5 border-t border-r border-gold/60" />
       <div className="absolute bottom-4 left-4 w-3.5 h-3.5 border-b border-l border-gold/60" />
       <div className="absolute bottom-4 right-4 w-3.5 h-3.5 border-b border-r border-gold/60" />
+
+      {/* Subtle Background Mandala Watermark */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 opacity-[0.03] pointer-events-none z-0">
+        <img 
+          src="/invitation_bg.png" 
+          alt="mandala" 
+          className="w-full h-full object-contain filter sepia"
+        />
+      </div>
 
       {/* Section Header */}
       <div className="text-center mb-8 flex flex-col items-center">
@@ -147,7 +156,7 @@ export default function LocationCard() {
       </div>
 
       {/* RSVP Section */}
-      <div className="mt-6 bg-cream border border-gold/30 rounded-xl p-4 text-center relative overflow-hidden shadow-sm flex flex-col items-center">
+      <div className="mt-6 bg-white/70 backdrop-blur-xs border border-gold/30 rounded-xl p-4 text-center relative overflow-hidden shadow-sm flex flex-col items-center">
         <div className="absolute inset-0 opacity-5 pointer-events-none mandala-pattern" />
         <h4 className="font-heading text-lg text-maroon font-bold flex items-center gap-1.5 mb-1.5">
           आर.एस.व्ही.पी (RSVP)

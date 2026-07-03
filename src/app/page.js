@@ -104,8 +104,17 @@ export default function Home() {
       />
 
       {/* Center Mobile Container with Traditional Gold Border */}
-      <div className="w-full max-w-md min-h-dvh sm:min-h-[92vh] bg-white sm:rounded-3xl shadow-[0_0_60px_rgba(212,175,55,0.2)] border-0 sm:border-2 sm:border-gold/30 flex flex-col relative overflow-hidden traditional-border mobile-optimize">
+      <div className="w-full max-w-md min-h-dvh sm:min-h-[92vh] dot-pattern sm:rounded-3xl shadow-[0_0_60px_rgba(212,175,55,0.2)] border-0 sm:border-2 sm:border-gold/30 flex flex-col relative overflow-hidden traditional-border mobile-optimize">
         
+        {/* Custom Premium Symmetrical Background Image */}
+        <div className="absolute top-0 left-0 right-0 h-dvh z-0 pointer-events-none opacity-40 overflow-hidden">
+          <img 
+            src="/invitation_bg.png" 
+            alt="background pattern" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+
         {/* Traditional Hanging Toran (Mango Leaves & Marigold Flowers) */}
         <div className="absolute top-3 left-3 right-3 h-8 flex justify-around pointer-events-none z-20 opacity-90 select-none">
           {[...Array(9)].map((_, i) => (

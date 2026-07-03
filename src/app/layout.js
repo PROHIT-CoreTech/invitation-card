@@ -34,6 +34,7 @@ export default function RootLayout({ children }) {
         {/* Preload critical visual assets */}
         <link rel="preload" href="/ganesha-main.png" as="image" />
         <link rel="preload" href="/map_placeholder.png" as="image" />
+        <link rel="preload" href="/invitation_bg.png" as="image" />
       </head>
       <body className="antialiased min-h-screen">
         {children}
