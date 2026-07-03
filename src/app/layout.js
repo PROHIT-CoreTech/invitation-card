@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
     <html lang="mr" className={`${yatraOne.variable} ${poppins.variable}`}>
       <head>
         {/* Preload critical visual assets */}
-        <link rel="preload" href="/ganesha.png" as="image" />
+        <link rel="preload" href="/ganesha.png?v=2" as="image" />
         <link rel="preload" href="/map_placeholder.png" as="image" />
       </head>
       <body className="antialiased min-h-screen">

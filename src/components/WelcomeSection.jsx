@@ -105,7 +105,7 @@ export default function WelcomeSection() {
         
         <div className="relative w-[85%] h-[85%] rounded-full overflow-hidden">
           <Image
-            src="/ganesha.png"
+            src="/ganesha.png?v=2"
             alt="Lord Ganesha"
             fill
             priority
