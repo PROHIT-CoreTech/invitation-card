@@ -141,7 +141,13 @@ export default function Home() {
             <MarigoldPetals />
             
             {/* Subtle background watermark image */}
-            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 opacity-[0.02] pointer-events-none z-0 bg-[url('/ganesha-main.png')] bg-contain bg-center bg-no-repeat filter sepia hue-rotate-15 contrast-200" />
+            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 opacity-[0.06] pointer-events-none z-0">
+              <img 
+                src="/ganesha-main.png" 
+                alt="watermark" 
+                className="w-full h-full object-contain filter sepia hue-rotate-15 contrast-200 brightness-90"
+              />
+            </div>
 
             {/* Hero Section */}
             <WelcomeSection />
